@@ -30,11 +30,11 @@ export const greetingSlice = createSlice({
         state.status = 'completed';
         const { message } = action.payload;
         state.message = message;
-        state.error = '';
+        state.error = null;
       })
       .addCase(fetchGreeting.rejected, (state, action) => {
-        state.status = 'error';
-        state.error = action.payload.message;
+        state.status = 'failed';
+        state.error = action.error.message;
       });
   },
 });

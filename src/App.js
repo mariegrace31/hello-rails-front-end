@@ -6,8 +6,8 @@ import Greeting from './components/greeting';
 function App() {
   return (
     <div className="App">
-      <NavLink to="/greeting">
-        greeting
+      <NavLink to="/greeting" className="greeting">
+        Random Greeting
       </NavLink>
       <Routes>
         <Route path="/greeting" element={<Greeting />} />
